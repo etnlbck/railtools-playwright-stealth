@@ -6,14 +6,17 @@
     "build": "tsc",
     "start": "npm run build && node dist/main.js",
     "dev": "ts-node main.ts",
-    "test": "npm run build && node dist/main.js"
+    "webhook": "npm run dev",
+    "test": "curl http://localhost:3000/test-bot-detection"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@types/express": "^5.0.3",
     "@types/node": "^22.15.29",
+    "express": "^5.1.0",
     "playwright-extra": "^4.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2",
     "ts-node": "^10.9.2",
